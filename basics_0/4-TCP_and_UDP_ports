@@ -1,3 +1,5 @@
-#!/usr/bin/env bash
-#display listening ports
-netstat -l
+#!/bin/bash
+
+# Display active listening TCP and UDP ports along with PID and program name
+sudo ss -tunlp | grep LISTEN
+
