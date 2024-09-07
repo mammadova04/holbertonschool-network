@@ -1,3 +1,10 @@
-#!/usr/bin/env bash
-#display listening ports
-netstat -l
+#!/bin/bash
+
+# Display active Internet connections (only servers)
+echo "Active Internet connections (only servers)"
+sudo netstat -tunlp | grep LISTEN
+
+# Display active UNIX domain sockets (only servers)
+echo "Active UNIX domain sockets (only servers)"
+sudo netstat -xanlp | grep LISTEN
+
